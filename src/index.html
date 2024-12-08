@@ -52,14 +52,38 @@
         <div class="col-md-8 offet-md-2">
           <div class="card">
             <div class="card-body">
-              <input
-                id="calc-display"
-                readonly
-                class="form-control form-control-lg text-end"
-                type="text"
-                aria-label="calc input window"
-              />
-              <div class="row gx-1">
+              <div class="row g-1">
+                <div class="col-9">
+                  <input
+                    id="calc-display"
+                    readonly
+                    class="form-control text-end"
+                    type="text"
+                    aria-label="calc display window"
+                  />
+                </div>
+                <div class="col-1 text-center">
+                  <h1>=</h1>
+                </div>
+                <div class="col-2">
+                  <input
+                    id="calc-answer"
+                    readonly
+                    class="form-control text-end col-2 border border-primary"
+                    type="text"
+                    aria-label="calc answer window"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    id="calc-entry"
+                    readonly
+                    class="form-control form-control-lg text-end"
+                    type="text"
+                    aria-label="calc input window"
+                  />
+                </div>
+
                 <div class="col-3">
                   <button
                     type="button "
@@ -70,8 +94,10 @@
                 </div>
                 <div class="col-3">
                   <button
+                    id="close-bracket-btn"
                     type="button "
                     class="w-100 border mt-2 btn btn-light"
+                    disabled
                   >
                     )
                   </button>
@@ -79,7 +105,7 @@
                 <div class="col-3">
                   <button
                     type="button "
-                    class="w-100 border mt-2 btn btn-light"
+                    class="w-100 border mt-2 btn btn-light operator"
                   >
                     %
                   </button>
@@ -119,9 +145,9 @@
                 <div class="col-3">
                   <button
                     type="button "
-                    class="w-100 border mt-2 btn btn-light"
+                    class="w-100 border mt-2 btn btn-light operator"
                   >
-                    ÷
+                    /
                   </button>
                 </div>
                 <div class="col-3">
@@ -151,9 +177,9 @@
                 <div class="col-3">
                   <button
                     type="button "
-                    class="w-100 border mt-2 btn btn-light"
+                    class="w-100 border mt-2 btn btn-light operator"
                   >
-                    X
+                    *
                   </button>
                 </div>
                 <div class="col-3">
@@ -183,7 +209,7 @@
                 <div class="col-3">
                   <button
                     type="button "
-                    class="w-100 border mt-2 btn btn-light"
+                    class="w-100 border mt-2 btn btn-light operator"
                   >
                     -
                   </button>
@@ -206,6 +232,7 @@
                 </div>
                 <div class="col-3">
                   <button
+                    id="equals-btn"
                     type="button "
                     class="w-100 border border-primary mt-2 btn btn-primary"
                   >
@@ -215,9 +242,41 @@
                 <div class="col-3">
                   <button
                     type="button "
-                    class="w-100 border mt-2 btn btn-light"
+                    class="w-100 border mt-2 btn btn-light operator"
                   >
                     +
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button
+                    type="button "
+                    class="w-100 border mt-2 btn btn-light operator"
+                  >
+                    sin
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button
+                    type="button "
+                    class="w-100 border mt-2 btn btn-light operator"
+                  >
+                    cos
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button
+                    type="button "
+                    class="w-100 border mt-2 btn btn-light operator"
+                  >
+                    tan
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button
+                    type="button "
+                    class="w-100 border mt-2 btn btn-light"
+                  >
+                    CE
                   </button>
                 </div>
               </div>
